@@ -7,7 +7,8 @@ auto-save-*.el           # 自动保存文件
 \#*\#                    # 自动保存临时文件 (#file#)
 .\#*                     # lock 文件 (.#file)
 *.eln                    # native-comp 产物
-
+tree-sitter/
+tutorial/
 # === 包管理 ===
 elpa/                    # package.el 安装的包
 straight/                # straight.el（如果你以后用）

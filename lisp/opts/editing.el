@@ -15,3 +15,14 @@
 (setq make-backup-files nil)
 
 (setq-default truncate-lines t)
+
+;; 把备份文件（*~）挪到临时目录
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+
+;; 把自动保存文件（#*#）挪到临时目录
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+(global-tab-line-mode 1)
+(setq elisp-fontify-semantically t)

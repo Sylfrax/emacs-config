@@ -7,6 +7,9 @@
 
 (load "init-package")
 (load "colortheme")
+(load "tree-sit")
+(load "ranbow-pair")
+(load "line")
 (load "cmp")
 (load "editing")
 (load "keymap")
