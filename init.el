@@ -7,7 +7,7 @@
 
 (load "init-package")
 (load "colortheme")
-
+(load "cmp")
 (load "editing")
 (load "keymap")
 

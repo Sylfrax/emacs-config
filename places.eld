@@ -1,0 +1,2 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/root/.emacs.d/init.el" . 138) ("/root/.emacs.d/lisp/init-ui.el" . 60) ("/root/.emacs.d/lisp/init-packages.el" . 47) ("/root/.emacs.d/lisp/init-editing.el" . 64))

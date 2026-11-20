@@ -13,3 +13,5 @@
 (setq which-key-idle-delay 0.3)
 
 (setq make-backup-files nil)
+
+(setq-default truncate-lines t)
