@@ -1,17 +1,23 @@
-# Compiled
-*.elc
-
-# Packaging
-.cask/
-.eask/
-.eldev/
-.keg/
-
-# Built distribution
-dist/
-
-# Backup files
+# === Emacs 生成/缓存 ===
+*.elc                    # 字节编译产物
+eln-cache/               # native-comp 缓存（Emacs 28+）
+auto-save-list/          # 自动保存列表
+auto-save-*.el           # 自动保存文件
 *~
+\#*\#                    # 自动保存临时文件 (#file#)
+.\#*                     # lock 文件 (.#file)
+*.eln                    # native-comp 产物
 
-# Undo-tree save-files
-*.~undo-tree
+# === 包管理 ===
+elpa/                    # package.el 安装的包
+straight/                # straight.el（如果你以后用）
+.cache/                  # 各种缓存
+
+# === 本地状态 ===
+places.eld               # 保存的 cursor 位置
+custom.el                # customize 写入的文件
+# 注意：如果你把 custom.el 当配置用，就别忽略它
+
+# === 其他 ===
+*.log
+.DS_Store
