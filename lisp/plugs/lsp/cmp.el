@@ -1,35 +1,23 @@
 ;; -*- lexical-binding: t; -*-
 
-
-(use-package vertico
-  :ensure t
-  :init
-  (vertico-mode 1))
-
 (use-package markdown-mode
   :ensure t)
 
-(use-package corfu
-  :ensure t
-  :custom
-  (corfu-cycle t)                ;; 允许循环选择
-  (corfu-auto t)                 ;; 开启自动补全
-  (corfu-auto-prefix 2)          ;; 输入2字符后触发
-  (corfu-auto-delay 0.2)         ;; 弹出延迟
-  (corfu-preview-current nil)    ;; 不预览当前选中项 
-  (corfu-quit-no-match 'separator)
-  :init
-  (global-corfu-mode 1)
-  (corfu-popupinfo-mode 1)
-  (setq corfu-popupinfo-delay 0.5))
 
-;; 推荐搭配 Orderless 或 Flex 风格，以便更灵活地过滤 LSP 返回的候选
-(use-package orderless
+(use-package company
   :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-defaults nil)
-  (completion-category-overrides nil))
+  :hook (after-init . global-company-mode)
+  :config
+  ;; 输入 1 个字符后就开始补全（默认是 3）
+  (setq company-minimum-prefix-length 1)
+  ;; 停止输入 0.1 秒后弹出补全（默认是 0.5）
+  (setq company-idle-delay 0.1)
+  ;; 对齐候选词右侧的注释/类型信息，看起来更整齐
+  (setq company-tooltip-align-annotations t))
+
+(use-package company-box
+  :ensure t
+  :hook (company-mode . company-box-mode))
 
 (use-package flycheck
   :ensure t
@@ -39,6 +27,7 @@
   :config
   ;; 让 Flycheck 接管 Eglot 的 LSP 诊断
   (global-flycheck-eglot-mode 1))
+(flymake-mode -1)
 
 ;; Eglot 通常是内置的，确保在需要的模式中启动
 (add-hook 'eglot-managed-mode-hook

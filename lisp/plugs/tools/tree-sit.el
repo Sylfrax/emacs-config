@@ -8,4 +8,6 @@
   (global-treesit-auto-mode))
 
 (setq treesit-language-source-alist
-      '((python . ("https://github.com/tree-sitter/tree-sitter-python"))))
+      '((python . ("https://github.com/tree-sitter/tree-sitter-python"))
+
+	(elisp . ("https://github.com/Wilfred/tree-sitter-elisp"))))

@@ -13,6 +13,7 @@
 (load "ranbow-pair")
 (load "line")
 
+(load "magit")
 (load "cmp")
 
 (load "editing")
