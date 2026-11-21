@@ -15,3 +15,5 @@
 (global-set-key (kbd "C-c l") (lambda ()
 				(interactive)
 				(load-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c c") #'kill-ring-save)
+(global-set-key (kbd "C-c z") #'kill-region)

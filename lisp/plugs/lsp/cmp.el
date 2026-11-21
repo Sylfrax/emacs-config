@@ -8,6 +8,7 @@
   :ensure t
   :hook (after-init . global-company-mode)
   :config
+  (company-mode 1)
   ;; 输入 1 个字符后就开始补全（默认是 3）
   (setq company-minimum-prefix-length 1)
   ;; 停止输入 0.1 秒后弹出补全（默认是 0.5）
@@ -17,7 +18,9 @@
 
 (use-package company-box
   :ensure t
-  :hook (company-mode . company-box-mode))
+  :hook (company-mode . company-box-mode)
+  :config
+)
 
 (use-package flycheck
   :ensure t
@@ -29,8 +32,3 @@
   (global-flycheck-eglot-mode 1))
 (flymake-mode -1)
 
-;; Eglot 通常是内置的，确保在需要的模式中启动
-(add-hook 'eglot-managed-mode-hook
-          (lambda ()
-            ;; 确保 Corfu 在 eglot 管理的 buffer 中正常工作
-            (setq-local completion-styles '(orderless basic))))
