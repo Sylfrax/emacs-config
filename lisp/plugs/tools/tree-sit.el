@@ -1,5 +1,6 @@
 ;; -*- lexical-binding: t; -*-
 (use-package treesit-auto
+  :ensure t
   :custom
   (treesit-auto-install 'prompt)
   :config
@@ -7,4 +8,4 @@
   (global-treesit-auto-mode))
 
 (setq treesit-language-source-alist
-      '((python . ("~/tree-sitter-python/"))))
+      '((python . ("https://github.com/tree-sitter/tree-sitter-python"))))

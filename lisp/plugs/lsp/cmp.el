@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t; -*-
 
 (use-package corfu
+  :ensure t
   :custom
   (corfu-cycle t)                ;; 允许循环选择
   (corfu-auto t)                 ;; 开启自动补全
