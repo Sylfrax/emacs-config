@@ -39,4 +39,4 @@
  '(dashboard-banner-logo-title ((t (:foreground "#0bffff"))))
  '(dashboard-heading ((t (:foreground "#00ffff"))))
  '(dashboard-items-face ((t (:foreground "#98c379"))))
- '(dashboard-text-banner ((t (:foreground "#0fffff")))))
+ '(dashboard-text-banner ((t (:foreground "#92ffff")))))
