@@ -6,11 +6,15 @@
   (add-to-list 'load-path (expand-file-name dir my/lisp-dir)))
 
 (load "init-package")
+
 (load "colortheme")
 (load "tree-sit")
+(load "p-dashboard")
 (load "ranbow-pair")
 (load "line")
+
 (load "cmp")
+
 (load "editing")
 (load "keymap")
 

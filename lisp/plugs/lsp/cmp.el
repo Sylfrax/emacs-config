@@ -1,5 +1,11 @@
 ;; -*- lexical-binding: t; -*-
 
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode 1))
+
 (use-package corfu
   :ensure t
   :custom

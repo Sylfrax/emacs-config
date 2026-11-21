@@ -12,6 +12,9 @@
 (which-key-mode 1)
 (setq which-key-idle-delay 0.3)
 
+(menu-bar-mode -1)
+
+
 (setq make-backup-files nil)
 
 (setq-default truncate-lines t)

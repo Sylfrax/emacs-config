@@ -10,4 +10,8 @@
 
 ;; 编辑辅助
 (global-set-key (kbd "C-c r") #'query-replace)
-(global-set-key (kbd "C-c l") #'goto-line)
+(global-set-key (kbd "C-c g") #'goto-line)
+
+(global-set-key (kbd "C-c l") (lambda ()
+				(interactive)
+				(load-file "~/.emacs.d/init.el")))
