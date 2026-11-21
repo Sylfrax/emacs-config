@@ -11,3 +11,5 @@
       '((python . ("https://github.com/tree-sitter/tree-sitter-python"))
 	(c . ("https://github.com/tree-sitter/tree-sitter-c"))
 	(elisp . ("https://github.com/Wilfred/tree-sitter-elisp"))))
+
+(setopt treesit-font-lock-level 4)

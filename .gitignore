@@ -13,3 +13,5 @@
 # 保留 lisp/ 及其全部子内容
 !/lisp/
 !/lisp/**
+
+!/atom-one-dar-c-theme.el
